@@ -27,3 +27,4 @@
         "regex": "sakura-tag-v$version-([\\w-]+)-Win32-Release-Exe.zip"
     }
 }
+
