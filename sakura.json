@@ -4,7 +4,7 @@
     "homepage": "https://sakura-editor.github.io/",
     "license": "zlib",
     "architecture": {
-        "64bit": {
+        "32bit": {
             "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-$build-Win32-Release-Exe.zip",
             "hash": "auto"
         }
