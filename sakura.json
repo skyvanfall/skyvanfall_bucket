@@ -5,14 +5,14 @@
     "license": "zlib",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-$build-Win32-Release-Exe.zip",
+            "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-build4203-a3e63915b-Win32-Release-Exe.zip",
             "hash": "auto"
         }
     },
     "bin": "sakura.exe",
     "installer": {
         "script": [
-            "Expand-Archive \"$dir\\sakura-tag-v$version-$build-Win32-Release-Exe.zip\" -DestinationPath \"$dir\""
+            "Expand-Archive \"$dir\\sakura-tag-v$version-build4203-a3e63915b-Win32-Release-Exe.zip\" -DestinationPath \"$dir\""
         ]
     },
     "checkver": {
@@ -20,11 +20,10 @@
         "regex": "releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-$build-Win32-Release-Exe.zip",
+        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-build4203-a3e63915b-Win32-Release-Exe.zip",
         "hash": {
             "url": "$url.md5"
         },
-        "regex": "sakura-tag-v$version-([\\w-]+)-Win32-Release-Exe.zip"
+        "regex": "sakura-tag-v$version-build([\\d]+)-([\\w]+)-Win32-Release-Exe.zip"
     }
 }
-
