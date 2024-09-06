@@ -1,0 +1,28 @@
+{
+    "version": "2.4.2",  // 当前版本号，初始版本可以从 GitHub releases 页面找到
+    "description": "Sakura Editor is a Japanese text editor.",
+    "homepage": "https://sakura-editor.github.io/",
+    "license": "zlib",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-setup-v$version-x64.exe",
+            "hash": "auto"
+        }
+    },
+    "bin": "sakura.exe",
+    "installer": {
+        "script": [
+            "Start-Process \"$dir\\sakura-setup-v$version-x64.exe\" -ArgumentList \"/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-\" -Wait"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/sakura-editor/sakura",
+        "regex": "releases/tag/v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-setup-v$version-x64.exe",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
