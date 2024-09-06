@@ -1,5 +1,5 @@
 {
-    "version": "2.4.2",  // 当前版本号，初始版本可以从 GitHub releases 页面找到
+    "version": "2.4.2",
     "description": "Sakura Editor is a Japanese text editor.",
     "homepage": "https://sakura-editor.github.io/",
     "license": "zlib",
