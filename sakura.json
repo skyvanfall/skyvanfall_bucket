@@ -5,14 +5,14 @@
     "license": "zlib",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-setup-v$version-x64.exe",
+            "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-$build-Win32-Release-Exe.zip",
             "hash": "auto"
         }
     },
     "bin": "sakura.exe",
     "installer": {
         "script": [
-            "Start-Process \"$dir\\sakura-setup-v$version-x64.exe\" -ArgumentList \"/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-\" -Wait"
+            "Expand-Archive \"$dir\\sakura-tag-v$version-$build-Win32-Release-Exe.zip\" -DestinationPath \"$dir\""
         ]
     },
     "checkver": {
@@ -20,9 +20,10 @@
         "regex": "releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-setup-v$version-x64.exe",
+        "url": "https://github.com/sakura-editor/sakura/releases/download/v$version/sakura-tag-v$version-$build-Win32-Release-Exe.zip",
         "hash": {
-            "url": "$url.sha256"
-        }
+            "url": "$url.md5"
+        },
+        "regex": "sakura-tag-v$version-([\\w-]+)-Win32-Release-Exe.zip"
     }
 }
